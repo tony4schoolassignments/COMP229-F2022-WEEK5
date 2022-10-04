@@ -1,25 +1,24 @@
 import {Router} from 'express';
 import { DisplayLoginPage, 
     DisplayRegisterPage, 
-    ProcessLoginPage, 
-    ProcessRegisterPage, 
-    ProcessLogoutPage } from '../controllers/auth.controller.server.js';
+    ProcessLoginPage,
+    ProcessLogoutPage,
+    ProcessRegisterPage} from '../controllers/auth.controller.server.js';
 
 const router = Router();
 
-// Display Login page
+// Display Login Page
 router.get('/login', DisplayLoginPage);
-
-// Process Login page
+// Process Login Page
 router.post('/login', ProcessLoginPage);
 
-// Display Registration page
-router.get('/register', DisplayRegisterPage);
 
+// Display Registration Page
+router.get('/register', DisplayRegisterPage);
 // Process Registration page
 router.post('/register', ProcessRegisterPage);
 
-// Process Logout page
+// Process Logout Page
 router.get('/logout', ProcessLogoutPage);
 
 export default router;

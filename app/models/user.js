@@ -9,9 +9,9 @@ const UserSchema = new Schema({
     emailAddresss: String,
 },{
     timestamps: true,
-    collation: 'users'
+    collection: 'users'
 });
 
 UserSchema.plugin(passportLocalMongoose);
 
-export default mongoose.model('user', UserSchema);
+export default mongoose.model('User', UserSchema);
